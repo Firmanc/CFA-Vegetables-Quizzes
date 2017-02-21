@@ -37,9 +37,3 @@ class Computer
    return nil
  end
 end
-
-bob = Computer.new("bob")
-x = "D"
-10.times do
-puts bob.assign_prob(x)
-end
