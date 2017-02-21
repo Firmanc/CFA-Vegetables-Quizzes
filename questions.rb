@@ -6,7 +6,7 @@ class Questions
   attr_accessor :questions
 
 # method which asks questions...
-  def ask_questions
+  def ask_questions(computer)
     # saves the answers inside an array
     @answers = []
 
@@ -18,20 +18,30 @@ class Questions
 
       puts "What do you choose? Select from A, B, C or D"
       @answer = gets.chomp.upcase
-      boolean_answers
+      boolean_answers_person
+      computer.assign_prob(@x)
+      boolean_answers_computer
       @answers << @answer
       puts @answers.inspect
     end
 end
 
-  def boolean_answers
+  def boolean_answers_person
     if @answer == @x
       puts "You got it right!"
+    else
+      puts "You got that wrong!"
+    end
+  end
+
+  def boolean_answers_computer
+    if @c == @x
+      puts "The computer got it right!"
       puts "Press Enter to continue"
       gets.chomp
       system("clear")
     else
-      puts "You got that wrong!"
+      puts "The computer got that wrong!"
       puts "Press Enter to continue"
       gets.chomp
       system("clear")
@@ -39,15 +49,3 @@ end
   end
 
 end
-
-question_list = [
-["Where is Honolu?", "A", "B", "C", "D", "A"],
-["What Vegie is the best?", "A", "B", "C", "D", "B"],
-["Carrot has calcium?", "A", "B", "C", "D", "C"],
-]
-
-questions_master = Questions.new(question_list)
-
-questions_master.ask_questions
-
-puts @answers.inspect
