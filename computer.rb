@@ -1,5 +1,5 @@
 class Computer
- attr_accessor :name
+ attr_accessor :name, :score
  def initialize(name)
    @name = name
    @score = 0
@@ -36,4 +36,9 @@ class Computer
    end
    return nil
  end
+
+ def increase_score
+   @score = @score + 1
+ end
+
 end
