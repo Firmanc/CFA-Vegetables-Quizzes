@@ -1,26 +1,30 @@
 class Questions
   def initialize
-    @questions = [
-    ["Where is Honolu?", "A", "B", "C", "D", "A"],
-    ["What Vegie is the best?", "A", "B", "C", "D", "B"],
-    ["Carrot has calcium?", "A", "B", "C", "D", "C"],
-    ]
+    @questions = []
     @answers = []    # saves the answers inside an array
   end
 
   attr_accessor :questions, :answers
 
+  def getting_questions(file)
+       File.readlines(file).each do |x|
+           @questions << x.split(":")
+           #puts @questions.inspect
+      end
+
+  end
+
 # method which asks questions...
 
   def ask_questions(opponent, person)
 
-    @questions.each do |ary|
+    @questions.length.times do |ary|
       #[0..4] shows the first five items of the 1st array
-      puts ary[0..4]
+      puts @questions[ary]
       #storing the right answer
-      right_answer = ary[5]
+      right_answer = @questions[ary].last
       #asking a player the questions and getting the result
-      puts "What do you choose? Select from A, B, C or D"
+      puts "\nWhat do you choose? Select from A, B, C or D"
       player_answer = gets.chomp.upcase
       #calling the result method for the player
       boolean_answers_person(person, player_answer, right_answer)
@@ -31,27 +35,27 @@ class Questions
       #putting the answer into the answer array
       @answers << player_answer
 
-      puts ""
-      puts "Press Enter to continue"
+      puts "\nPress Enter to continue"
       gets.chomp
       system("clear")
 
     end
 end
  # a method to decide if the player answer correctly
-  def boolean_answers_person(player, player_result, right_result)
+ def boolean_answers_person(player, player_result, right_result)
     #condition matching the player result with right result
-    if player_result == right_result
+    if player_result.to_s == right_result.to_s
       puts "You got it right!"
       player.increase_score
     else
       puts "You got that wrong!"
+      puts right_result
     end
   end
 
 # a method if the computer produce the right answer
   def boolean_answers_computer(computer, com_result, right_result)
-    if com_result == right_result
+    if com_result.to_s == right_result.to_s
       puts "The computer select #{com_result}, that is correct"
       computer.increase_score
     else
