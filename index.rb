@@ -3,11 +3,6 @@ require_relative "computer"
 require_relative "players"
 require_relative "high_score"
 
-#method to get the game
-def set_info
-  print "Please type in your name: "
-  return name = gets.chomp
-end
 #clear the screen
 def clear_screen
   system("clear")
