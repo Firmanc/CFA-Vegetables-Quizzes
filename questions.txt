@@ -1,3 +1,2 @@
 What colour is carrot? :A) Blue :B) Orange :C) Green :D) Black :B
 What colour is tomato? :A) Purple :B) White :C) Black :D) Red :D
-

@@ -18,7 +18,7 @@ class Questions
   def ask_questions(opponent, person)
 
     #delete the last line
-    @questions.pop
+    #@questions.pop
     #loop the questions
     @questions.length.times do |ary|
       #[0..4] shows the first five items of the 1st array

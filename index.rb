@@ -1,6 +1,7 @@
 require_relative "questions"
 require_relative "computer"
 require_relative "players"
+require_relative "high_score"
 
 #method to get the game
 def set_info
@@ -11,7 +12,6 @@ end
 def clear_screen
   system("clear")
 end
-
 
 
 clear_screen
@@ -34,6 +34,10 @@ questions_list.getting_questions("questions.txt")
 current_opponent = Computer.new("bob")
 questions_list.ask_questions(current_opponent, current_player)
 
-puts "here are your anser #{questions_list.answers}"
+puts "here are your answer #{questions_list.answers}"
 puts "#{current_player.name}, Your score is #{current_player.score}"
 puts "....and the computer score is #{current_opponent.score}"
+
+#store the score in the record
+score_list = HighScore.new
+score_list.save_list("high_score.csv", current_player.name, current_player.score)
