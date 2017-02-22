@@ -5,6 +5,7 @@ require_relative "high_score"
 
 #method to get the game
 def set_info
+  system ('say "Please type in your name"')
   print "Please type in your name: "
   return name = gets.chomp
 end
