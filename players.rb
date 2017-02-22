@@ -13,7 +13,7 @@ class Players
   end
 
   def increase_score
-    @score = @score + 1
+    @score = @score + 10
   end
 
   #q_obj is the name of the questions object
