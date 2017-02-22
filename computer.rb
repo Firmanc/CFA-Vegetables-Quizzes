@@ -9,19 +9,26 @@ class Computer
  def assign_prob(answers)
    case answers
      when 'A'
-       return random_answer({"A" => 70, "B" => 10, "C" => 10, "D" => 10 })
+       return random_answer({"A" => 25, "B" => 25, "C" => 25, "D" => 25 })
      when 'B'
-       return random_answer({"A" => 10, "B" => 70, "C" => 10, "D" => 10 })
+       return random_answer({"A" => 25, "B" => 25, "C" => 25, "D" => 25 })
      when 'C'
-       return random_answer({"A" => 10, "B" => 10, "C" => 70, "D" => 10 })
+       return random_answer({"A" => 25, "B" => 25, "C" => 25, "D" => 25 })
      when 'D'
-       return random_answer({"A" => 10, "B" => 10, "C" => 10, "D" => 70 })
+       return random_answer({"A" => 25, "B" => 25, "C" => 25, "D" => 25 })
    end
+ end
+
+ def assign_total
  end
 
  def random_answer(options)
    #assigning the percentages
-   totalSize = 100
+   totalSize = 0
+
+   options.each do |value, size|
+    totalSize = totalSize + size
+    end
    #produce a random random from 100
    answer = rand(totalSize)
    #value to assign for probability
