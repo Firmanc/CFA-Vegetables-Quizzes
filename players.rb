@@ -10,6 +10,7 @@ class Players
   def set_name
     print "Please type in your name: "
     @name = gets.chomp
+    system %x(say 'Welcome #{@name}')
   end
 
   def increase_score
