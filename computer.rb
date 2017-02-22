@@ -19,7 +19,8 @@ class Computer
    end
  end
 
- def assign_total
+ def increase_score
+   @score = @score + 10
  end
 
  def random_answer(options)
@@ -42,10 +43,6 @@ class Computer
      end
    end
    return nil
- end
-
- def increase_score
-   @score = @score + 10
  end
 
 end

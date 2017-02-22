@@ -8,30 +8,35 @@ def clear_screen
   system("clear")
 end
 
+def next_page
+  puts ""
+  puts "Press Enter to continue"
+  gets.chomp
+  system("clear")
+end
+
 
 clear_screen
 #Starting the game
+#creating new player
 current_player = Players.new
 current_player.set_name #storing the the player information
-
 clear_screen
 #creating new player
 puts "Welcome #{current_player.name} "
-puts ""
-puts "Press Enter to continue"
-gets.chomp
-system("clear")
+next_page
 
 #creating new question lists
 questions_list = Questions.new
-#getting the questions from the file
 questions_list.getting_questions("questions.txt")
+#creating new computer opponet
 current_opponent = Computer.new("bob")
 questions_list.ask_questions(current_opponent, current_player)
 
-puts "here are your answer #{questions_list.answers}"
-puts "#{current_player.name}, Your score is #{current_player.score}"
-puts "....and the computer score is #{current_opponent.score}"
+#end massage
+#puts "here are your answers #{questions_list.answers}"
+puts "\n#{current_player.name}, Your score is #{current_player.score}"
+puts "the computer score #{current_opponent.score}\n\n"
 
 #store the score in the record
 score_list = HighScore.new
