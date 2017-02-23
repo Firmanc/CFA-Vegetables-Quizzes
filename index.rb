@@ -2,6 +2,7 @@ require_relative "questions"
 require_relative "computer"
 require_relative "players"
 require_relative "high_score"
+require "paint"
 
 #clear the screen
 def clear_screen
@@ -10,12 +11,42 @@ end
 
 def next_page
   puts ""
-  puts "You just robbed a bank Press Enter to continue"
-  gets.chomp
+  puts "Sh... quick and quiet. Don't let them catch you taking the money.."
+  sleep 4
+  puts ""
+  puts ""
+  puts "      \u{1f440}" * 5
+  sleep 4
+  puts ""
+  puts ""
+  puts " " * 30 + "#@$%! footsteps!"
+  sleep 2
+  puts ""
+  puts ""
+  puts " " * 30 + "RUN!"
+  sleep 3
+
   system("clear")
 end
 
 clear_screen
+
+puts %q{     .___.  .  .  .  .  .__
+       |    |__|  |  |  [ __
+       |    |  |  |__|  [_./
+
+     .     .   ,  .___  .___
+     |      \./   [__   [__
+     |___    |    |     [___
+
+       _,    _,    _,    _,
+      '_)   |.|   |.|   |.|
+      /_.   |_|   |_|   |_| }
+
+      sleep 3.5
+
+clear_screen
+
 #Starting the game
 #creating new player
 current_player = Players.new
@@ -23,13 +54,16 @@ current_player.set_name #storing the the player information
 clear_screen
 #creating new player
 puts "Welcome #{current_player.name} "
+sleep 2
 next_page
 
 #creating new question lists
 questions_list = Questions.new
-questions_list.getting_questions("questions.txt")
+questions_list.getting_questions("questions.csv")
 #creating new computer opponet
 current_opponent = Computer.new("Po-Po")
+questions_list.starting_animation
+questions_list.view_current
 questions_list.ask_questions(current_opponent, current_player)
 
 #end massage

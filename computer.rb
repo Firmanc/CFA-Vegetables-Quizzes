@@ -8,13 +8,13 @@ class Computer
  def assign_prob(answers)
    case answers
      when 'A'
-       return random_answer({"A" => 35, "B" => 15, "C" => 15, "D" => 15 })
+       return random_answer({"A" => 70, "B" => 10, "C" => 10, "D" => 10 })
      when 'B'
-       return random_answer({"A" => 15, "B" => 35, "C" => 15, "D" => 15 })
+       return random_answer({"A" => 10, "B" => 70, "C" => 10, "D" => 10 })
      when 'C'
-       return random_answer({"A" => 15, "B" => 15, "C" => 35, "D" => 15 })
+       return random_answer({"A" => 10, "B" => 10, "C" => 70, "D" => 10 })
      when 'D'
-       return random_answer({"A" => 15, "B" => 15, "C" => 15, "D" => 35 })
+       return random_answer({"A" => 10, "B" => 10, "C" => 10, "D" => 70 })
    end
  end
 

@@ -1,0 +1,4 @@
+* paint
+* add finishing animation
+* incorrect selection
+* randomise
