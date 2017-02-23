@@ -41,5 +41,4 @@ puts "the computer score #{current_opponent.score}\n\n"
 #store the score in the record
 score_list = HighScore.new
 score_list.save("high_score.csv", current_player.name, current_player.score)
-#score_list.display("high_score.csv")
 score_list.read("high_score.csv")
