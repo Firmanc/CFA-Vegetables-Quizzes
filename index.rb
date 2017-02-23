@@ -10,11 +10,10 @@ end
 
 def next_page
   puts ""
-  puts "Press Enter to continue"
+  puts "You just robbed a bank Press Enter to continue"
   gets.chomp
   system("clear")
 end
-
 
 clear_screen
 #Starting the game
@@ -30,7 +29,7 @@ next_page
 questions_list = Questions.new
 questions_list.getting_questions("questions.txt")
 #creating new computer opponet
-current_opponent = Computer.new("bob")
+current_opponent = Computer.new("Po-Po")
 questions_list.ask_questions(current_opponent, current_player)
 
 #end massage

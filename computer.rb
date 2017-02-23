@@ -5,7 +5,6 @@ class Computer
    @score = 0
  end
 
-
  def assign_prob(answers)
    case answers
      when 'A'

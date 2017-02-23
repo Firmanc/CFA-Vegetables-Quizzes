@@ -21,7 +21,6 @@ class Questions
     @hashed_ans["D"] = selection[4]
   end
 
-
 # method which asks questions...
 
   def ask_questions(opponent, person)
@@ -60,18 +59,25 @@ end
  def boolean_answers_person(player, player_result, right_result, dsp_result)
     #condition matching the player result with right result
     #if ["A","B","C","D"].include? player_result
+    #loop do
       if player_result == right_result
         puts "you picked #{dsp_result}"
-        puts "You got it right!"
+        puts "You got it right!" + "  " + "\u{2705}" + "  " + "\u{1f600}"
         player.increase_score
       else
+      #elsif player_result.include?("A", "B", "C", "D") != right_result
+      #  @user.badges.any? { |b| b[:id] == 1 }
         puts "you picked #{dsp_result}"
-        puts "You got that wrong!"
+        puts "You got that wrong!" + "  " + "\u{274c}" + "  " + "\u{1f625}"
+      #else
+      #  break
+      #  puts "try again"
       end
+    end
+
   #  else
   #  end
   end
-
 
 # a method if the computer produce the right answer
   def boolean_answers_computer(computer, com_result, right_result, display_rst)
@@ -79,17 +85,16 @@ end
 
       puts "\naannnndddddd #{computer.name} select...."
       $stdout.flush
-      sleep(2)
+      sleep(1.5)
       puts "\n>#{display_rst}"
-      puts "\n#{computer.name} is correct"
+      puts "\n#{computer.name} is correct" + "\u{2705}" + "  " + "\u{1f600}"
       computer.increase_score
     else
       puts "\naannnndddddd #{computer.name} select...."
       $stdout.flush
-      sleep(2)
+      sleep(1.5)
       puts "\n>#{display_rst}"
-      puts "\n> #{computer.name} is wrong!"
-
+      puts "\n> #{computer.name} is wrong!" + "\u{274c}" + "  " + "\u{1f625}"
     end
   end
 end
