@@ -76,6 +76,7 @@ end
         view_current
         puts "You picked: \n#{dsp_result}"
         puts "Woo! Correct!" + " \u{2705}" + "  " + "\u{1f600}"
+        system ("say yay")
         player.increase_score
         @player_correct << true
       else
@@ -83,6 +84,7 @@ end
         view_current
         puts "You picked: \n#{dsp_result}"
         puts "Fail bro." + " \u{274c}" + "  " + "\u{1f625}"
+        system ("say damn")
         @player_correct << false
       end
   end
