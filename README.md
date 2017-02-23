@@ -36,8 +36,9 @@ The idea of an anxiety arousing quiz game came to mind with an original theme of
 
 To begin the design process, we did quite well to build together a strong list of user stories and developer stories. From this session, we were able to realise that the most important classes which we had to make were ‘Questions’, ‘Players’, ‘Computer’, ‘Animation’ and ‘Picture’. This allowed us to build a skeleton code for our program. So as a team, we split up and began creating the different Classes and debugging the resulting issues.
 
-
-
+![alt tag](CFA-Thug-Lyfe/images/carrot.png)
+![alt tag](https://github.com/Firmanc/CFA-Thug-Lyfe/blob/master/images/carrot.png)
+[[CFA-Thug-Lyfe/images/carrot.png]]
 
 With great progress on the ‘Questions’, ‘Players’ and ‘Computer’ classes - we now had to tackle the other two challenging classes of ‘Animation’ and ‘Picture’. The reason for us wanting to create these classes was so we could make our program more engaging and responsive. Hence we tried using Catpix as one of the gems as it allows you to produce any image available and to reproduce it on the Terminal. With some progress, we did manage to get a ‘carrot vegetable’ to go left to right, which was quite an achievement for the team.
 
