@@ -17,9 +17,9 @@ $ bundler install
 ```
 The ```bundler install``` command must be called in the root directory of the repo.
 
-To run the file in terminal: ```$ ruby.index.rb```
+## Usage installation
 
-The following should appear:
+To run the file in terminal: ```$ ruby index.rb```
 
 ## Design Journey/Process
 

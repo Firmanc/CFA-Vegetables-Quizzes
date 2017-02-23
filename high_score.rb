@@ -30,5 +30,4 @@ class HighScore
      puts table
   end
 
-
 end

@@ -5,8 +5,6 @@ class Questions
     @player_correct = []
     @computer_correct = []
     @hashed_ans = Hash.new
-
-
     @player = "\u{1f988}"
     @computer = "\u{1f693}"
     @start = "\u{1f3e6}"
@@ -16,7 +14,7 @@ class Questions
     @level1_string = " " * 2 + @goal + " " * 49 + @start
   end
 
-  attr_accessor :questions, :answers ,:options, :player_correct, :computer_correct, :player, :computer, :player_pos, :computer_pos, :player_correct, :computer_correct, :level1_string
+  attr_accessor :hashed_ans, :questions, :answers ,:options, :player_correct, :computer_correct, :player, :computer, :player_pos, :computer_pos, :player_correct, :computer_correct, :level1_string
 
 #method to obtain the questions from a text file
   def getting_questions(file)
@@ -108,15 +106,6 @@ end
       @computer_correct << false
     end
   end
-
-
-
-
-
-
-
-
-
 
   def set_position
     if @player_correct[-1] == true

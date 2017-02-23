@@ -6,7 +6,6 @@ require_relative "computer"
 require_relative "players"
 require_relative "high_score"
 
-
 class PlayersTest < Test::Unit::TestCase
 
   def test_player_starting_score

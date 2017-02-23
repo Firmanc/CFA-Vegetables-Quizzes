@@ -11,20 +11,23 @@ end
 
 def next_page
   puts ""
-  puts "Sh... quick and quiet. Don't let them catch you taking the money.."
-  sleep 4
+  puts "Sh...quick and quiet. Don't let them catch you taking the money..."
+  system ("say quick and quiet. Don't let them catch you taking the money...")
+  sleep 3
   puts ""
   puts ""
   puts "      \u{1f440}" * 5
-  sleep 4
+  sleep 3
   puts ""
   puts ""
   puts " " * 30 + "#@$%! footsteps!"
+  system ("say F U C K... footsteps...")
   sleep 2
   puts ""
   puts ""
   puts " " * 30 + "RUN!"
-  sleep 3
+  system ("say RUN!")
+  sleep 2
 
   system("clear")
 end
@@ -43,6 +46,7 @@ puts %q{     .___.  .  .  .  .  .__
       '_)   |.|   |.|   |.|
       /_.   |_|   |_|   |_| }
 
+system ("say THUG LIFE 2000")
       sleep 3.5
 
 clear_screen
@@ -54,6 +58,8 @@ current_player.set_name #storing the the player information
 clear_screen
 #creating new player
 puts "Welcome #{current_player.name} "
+#system 'say Welcome %x(#{current_player.name})'
+system ("say Welcome '#{current_player.name}'")
 sleep 2
 next_page
 
