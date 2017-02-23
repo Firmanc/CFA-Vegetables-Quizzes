@@ -12,20 +12,13 @@ Thug Lyfe 2000 is written in Ruby and must have it installed (Ruby 2.4 or higher
 
 2. Thug Lyfe 2000 uses ```bundler``` to install dependencies.
 ```
-gem install bundler
-bundler install
+$ gem install bundler
+$ bundler install
 ```
 The ```bundler install``` command must be called in the root directory of the repo.
 
-In terminal run:
+To run the file in terminal: ```$ ruby.index.rb```
 
-```$ ruby index.rb```
-
-index.rb
-
-```ruby
-puts "\u{1f60e}"
-```
 The following should appear:
 
 ## Design Journey/Process
